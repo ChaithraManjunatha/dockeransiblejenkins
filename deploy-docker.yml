@@ -16,7 +16,7 @@
         daemon_reload: true
     - name: Install docker-py python module
       pip:
-        name: docker
+        name: docker.py
         state: latest
     - name: Start the container
       docker_container:
