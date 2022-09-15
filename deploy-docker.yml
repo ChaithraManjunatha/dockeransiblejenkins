@@ -23,7 +23,5 @@
         name: containerd.service
         daemon_reload: true
         enabled: true
-        image: "chaithramanjunatha/myapp1:${DOCKER_TAG}"
-        state: started
         published_ports:
           - 0.0.0.0:8080:8080
