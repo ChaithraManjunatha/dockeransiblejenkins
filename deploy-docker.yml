@@ -18,9 +18,9 @@
       pip:
         name: docker-py
         state: present
-    - name: Start the container
+    - name: Enable containerd.service
       systemd:
-        name: myapp1
+        name: containerd.service
         daemon_reload: true
         enabled: true
         image: "chaithramanjunatha/myapp1:${DOCKER_TAG}"
