@@ -3,7 +3,7 @@
   become: True
   tasks:
   - name: Removing Python libraries
-    pip:
+     pip:
       name: NumPy,SciPy
       state: absent
    - name: Install python pip
