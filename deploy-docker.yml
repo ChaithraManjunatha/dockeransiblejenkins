@@ -2,7 +2,7 @@
 - hosts: dev
   become: True
   tasks:
-    - name: Installing required version of python library in Ansible
+   - name: Installing required version of python library in Ansible
       pip:
       name: nltk
       version: '3.0.0'
