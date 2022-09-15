@@ -7,10 +7,10 @@
         name: python-pip
         state: present
         tasks:
-    - name: Removing Python libraries
+    - name: Installing required version of python library in Ansible
       pip:
-          name: NumPy,SciPy
-          state: absent
+          name: nltk
+          version: '3.0.0'
     - name: Install docker
       apt:
         name: docker
