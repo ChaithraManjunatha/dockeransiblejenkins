@@ -7,10 +7,10 @@
         name: python-pip
         state: present
         tasks:
-    - name: Installing required version of python library in Ansible
+    - name: Install docker-py python module
       pip:
-          name: nltk
-          version: '3.0.0'
+          name: docker-py
+          state: present
     - name: Install docker
       apt:
         name: docker
@@ -26,7 +26,7 @@
         state: present
     - name: Start the container
       docker_container:
-        name: hariapp
+        name: myapp1
         image: "chaithramanjunatha/myapp1:${{DOCKER_TAG}}"
         state: started
         published_ports:
