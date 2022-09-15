@@ -19,8 +19,10 @@
         name: docker-py
         state: present
     - name: Start the container
-      docker_container:
+      systemd:
         name: myapp1
+        daemon_reload: true
+        enabled: true
         image: "chaithramanjunatha/myapp1:${DOCKER_TAG}"
         state: started
         published_ports:
